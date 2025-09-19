@@ -1,0 +1,21 @@
+[project]
+name = "financial-mcp-service"
+version = "0.1.0"
+description = "Financial report analysis service for the Model Context Protocol"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "mcp==1.14.1",
+    "pydantic>=2.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+]
+
+[project.scripts]
+financial-mcp-service = "financial_mcp_service.server:run"
+
+[tool.pytest.ini_options]
+addopts = "-q"
